@@ -1,32 +1,86 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/screen_bg" android:fillViewport="true">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="vertical" android:padding="22dp">
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:text="Write a note" android:textSize="28sp" android:textStyle="bold"
-            android:textColor="@color/text_primary" android:layout_marginBottom="22dp"/>
-        <EditText android:id="@+id/titleInput" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:hint="Note title" android:textSize="20sp"
-            android:singleLine="true" android:padding="14dp" android:background="@drawable/bg_input"/>
-        <EditText android:id="@+id/contentInput" android:layout_width="match_parent"
-            android:layout_height="240dp" android:gravity="top|start" android:hint="Start writing..."
-            android:inputType="textCapSentences|textMultiLine" android:padding="14dp"
-            android:layout_marginTop="14dp" android:background="@drawable/bg_input"/>
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:text="Category" android:textStyle="bold" android:textColor="@color/text_primary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Write a note"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="22dp"/>
+
+        <EditText
+            android:id="@+id/titleInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Note title"
+            android:textColor="#172033"
+            android:textColorHint="#687386"
+            android:textSize="20sp"
+            android:singleLine="true"
+            android:padding="14dp"
+            android:background="@drawable/bg_input"/>
+
+        <EditText
+            android:id="@+id/contentInput"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="14dp"
+            android:hint="Start writing..."
+            android:textColor="#172033"
+            android:textColorHint="#687386"
+            android:gravity="top|start"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="14dp"
+            android:background="@drawable/bg_input"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
             android:layout_marginTop="18dp"/>
-        <Spinner android:id="@+id/categorySpinner" android:layout_width="match_parent"
-            android:layout_height="50dp" android:background="@drawable/bg_input"/>
-        <CheckBox android:id="@+id/favoriteCheck" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:text="Mark as favorite"
-            android:layout_marginTop="8dp"/>
-        <com.google.android.material.button.MaterialButton android:id="@+id/saveButton"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:text="Save Note" android:layout_marginTop="22dp"/>
-        <com.google.android.material.button.MaterialButton android:id="@+id/cancelButton"
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input"
+            android:popupBackground="#FFFFFF"/>
+
+        <CheckBox
+            android:id="@+id/favoriteCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Mark as favorite"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/accent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Save Note"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelButton"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Cancel"/>
+
     </LinearLayout>
 </ScrollView>
